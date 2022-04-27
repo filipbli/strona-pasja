@@ -1,25 +1,184 @@
-body{
+:root{
+    --skyblue-color: rgb(135, 206, 235);
+    --fieldgrass-color: rgb(52, 140, 49);
+}
+
+*{
     font-family: Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0; 
+}
+
+body{
+    height: 2000px;
 }
 
 header{
-    height: 80vh;
+    height: 40vh;
     width: 100%;
 }
 
 .header-banner{
-    height: 60vh;
-    width: 100%;
-}
-
-.header-banner__sky, .header-banner__field{
-    height: 50%;
+    height: 30vh;
+    position: relative;
     width: 100%;
 }
 
 .header-banner__sky{
-    background-color: ;
+    background-color: var(--skyblue-color);
+    height: 20vh;
+    max-width: 100%;
 }
+
+.header-banner__sky h1{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 54px;
+    padding-left: 1em;
+    padding-top: 1.3em;
+}
+
+.header-banner__sky h1 > i{
+    color: black;
+    font-size: 34px;
+    left: 850px;
+    position: absolute;
+    transform: rotate(180deg);
+    top: 82px;
+
+    animation: jump 4s ease-in infinite;
+    animation-delay: 4s;
+}
+
+.header-banner__field{
+    background-image: url("Stacked\ Wave3.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 10vh;
+    max-width: 100%;
+}
+
+.header-banner__goal{
+    border-top: 10px solid white;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    border-radius: 5% 5% 0 0;
+    bottom: 30px;
+    height: 100px;
+    right: 150px;
+    position: absolute;
+    transform: rotate(2deg);
+    width: 240px;
+}
+
+.header-banner__ball{
+    background-color: white;
+    border-radius: 50%;
+    bottom: 20px;
+    height: 70px;
+    left: 800px;
+    position: absolute;
+    width: 70px;
+}
+
+.header-banner__dot{
+    background-color: white;
+    border-radius: 50%;
+    bottom: 15px;
+    height: 20px;
+    left: 820px;
+    position: absolute;
+    transform: skew(20deg);
+    width: 30px;
+}
+
+.ball{
+    background-color: white;
+    border-radius: 50%;
+    bottom: 20px;
+    font-size: 70px;
+    left: 800px;
+    position: absolute;
+
+    animation: shoot 6s infinite;
+}
+
+.header-nav{
+    background-image: url("Wave5.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 10vh;
+    transform: rotate(180deg);
+    width: 100%;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    transform: rotate(180deg);
+}
+
+.nav-menu__item{
+    background-color: rgb(88, 47, 38);
+    border: 2px solid rgb(88, 47, 38);
+    color: white;
+    font-size: 22px;
+    margin-bottom: 0.4em;
+    padding: 0.5em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s;
+    z-index: 1;
+    width: 7em;
+}  
+
+.nav-menu__item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: rgb(235, 203, 153);
+    z-index: -1;
+    transition: all 0.5s;
+}
+   
+.nav-menu__item:hover::before{
+    width: 100%;
+}
+   
+.nav-menu__item:hover{
+    color: rgb(88, 47, 38);
+}
+   
+.nav-menu__item:active:before{
+    background: rgb(245, 190, 132);
+}
+
+.nav-menu__item:first-child{
+    margin-left: 12em;
+}
+
+@keyframes shoot{
+    from{left: 800px; bottom: 20px; font-size: 70px;}
+    to{left: 1800px; bottom: 80px; font-size: 30px;}
+}
+
+@keyframes jump{
+    0%{top: 82px;}
+    10%{top: 16px;}
+    20%{top: 82px;}
+    30%{top: 32px;}
+    40%{top: 82px;}
+    50%{top: 48px;}
+    60%{top: 82px;}
+    70%{top: 66px;}
+    80%{top: 82px;}
+    90%{top: 70px;}
+    100%{top: 82px;}
+}
+
