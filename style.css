@@ -1,0 +1,25 @@
+body{
+    font-family: Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 80vh;
+    width: 100%;
+}
+
+.header-banner{
+    height: 60vh;
+    width: 100%;
+}
+
+.header-banner__sky, .header-banner__field{
+    height: 50%;
+    width: 100%;
+}
+
+.header-banner__sky{
+    background-color: ;
+}
