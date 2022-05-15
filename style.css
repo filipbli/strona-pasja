@@ -11,11 +11,12 @@
 }
 
 body{
-    height: 2000px;
+    background-color: whitesmoke;
 }
 
 header{
-    height: 40vh;
+    background-color: black;
+    height: 45vh;
     width: 100%;
 }
 
@@ -105,67 +106,86 @@ header{
 }
 
 .header-nav{
-    background-image: url("Wave5.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: var(--fieldgrass-color);
     height: 10vh;
-    transform: rotate(180deg);
     width: 100%;
 }
 
 .nav-menu{
     display: flex;
-    justify-content: left;
     list-style-type: none;
-    transform: rotate(180deg);
+    padding-left: 1em;
+    padding-top: 1em;
 }
 
 .nav-menu__item{
-    background-color: rgb(88, 47, 38);
-    border: 2px solid rgb(88, 47, 38);
-    color: white;
-    font-size: 22px;
-    margin-bottom: 0.4em;
-    padding: 0.5em;
-    position: relative;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 16px;
+    margin-right: 0.1em;
+    margin-top: 1em;
+    padding: 0.6em;
     text-align: center;
     text-decoration: none;
-    transition: all 0.5s;
-    z-index: 1;
-    width: 7em;
+    width: 12em;
 }  
 
-.nav-menu__item::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background-color: rgb(235, 203, 153);
-    z-index: -1;
-    transition: all 0.5s;
-}
-   
-.nav-menu__item:hover::before{
-    width: 100%;
-}
-   
 .nav-menu__item:hover{
-    color: rgb(88, 47, 38);
-}
-   
-.nav-menu__item:active:before{
-    background: rgb(245, 190, 132);
+    background-color: whitesmoke;
+    color: black;
 }
 
-.nav-menu__item:first-child{
-    margin-left: 12em;
+hr{
+    background-color: black;
+    height: 0.2em;
+    margin-top: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+section{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8em;
+}
+
+.section-article{
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(178, 219, 255));
+    border-left: 6px solid black;
+    padding: 1em;
+    margin-bottom: 10em;
+    width: 60%;
+}
+
+.section-article > h1{
+    font-size: 44px;
+}
+
+.section-article__text{
+    float: left;
+    width: 60%;
+}
+
+.section-article__text > p{
+    padding: 1em;
+}
+
+.section-article__images{
+    float: left;
+    width: 40%;
+}
+
+.section-article__images img{
+    height: auto;
+    padding: 0.5;
+    width: 70%;
 }
 
 @keyframes shoot{
     from{left: 800px; bottom: 20px; font-size: 70px;}
-    to{left: 1800px; bottom: 80px; font-size: 30px;}
+    to{left: 1700px; bottom: 80px; font-size: 30px;}
 }
 
 @keyframes jump{
