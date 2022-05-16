@@ -123,16 +123,24 @@ header{
     color: whitesmoke;
     font-size: 16px;
     margin-right: 0.1em;
-    margin-top: 1em;
     padding: 0.6em;
+    position: relative;
     text-align: center;
     text-decoration: none;
+    top: 10px;
     width: 12em;
 }  
 
 .nav-menu__item:hover{
     background-color: whitesmoke;
     color: black;
+    animation: nav-top 0.8s;
+}
+
+.nav-menu__item:focus{
+    background-color: whitesmoke;
+    color: black;
+    animation: nav-top 0.8s;
 }
 
 hr{
@@ -152,11 +160,24 @@ section{
 }
 
 .section-article{
-    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(178, 219, 255));
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(208, 208, 208));
     border-left: 6px solid black;
     padding: 1em;
     margin-bottom: 10em;
     width: 60%;
+}
+
+.section-article:nth-child(2){
+    border-left: none;
+    border-right: 6px solid black;
+    background-image: linear-gradient(to left, rgb(255, 255, 255), rgb(208, 208, 208));
+}
+
+.section-article:nth-child(3){
+    border-left: none;
+    border-right: 6px solid black;
+    border-bottom: 6px solid black;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(208, 208, 208));
 }
 
 .section-article > h1{
@@ -169,7 +190,8 @@ section{
 }
 
 .section-article__text > p{
-    padding: 1em;
+    padding: 1em 7em 1em 1em;
+    font-size: 20px;
 }
 
 .section-article__images{
@@ -181,6 +203,59 @@ section{
     height: auto;
     padding: 0.5;
     width: 70%;
+}
+
+footer{
+    background-color: rgb(208, 208, 208);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: auto;
+    margin-top: 2em;
+    max-width: 100%;
+}
+
+.contact, .social{
+    margin: 3em;
+}
+
+.contact h1, .social h1{
+    margin-bottom: .5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contact ul{
+    list-style-type: none;
+}
+
+.contact li{
+    font-size: 20px;
+    line-height: 2em;
+}
+
+.social ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.social a{
+    color: black;
+    padding: 2em;
+    text-decoration: none;
+}
+
+.social li:first-child a:hover{
+    color: rgb(66, 103, 178);
+}
+
+.social li:nth-child(2) a:hover{
+    animation: gradient 4s infinite;
+}   
+
+.social li:nth-child(3) a:hover{
+    animation: opacity 2s infinite;
 }
 
 @keyframes shoot{
@@ -202,3 +277,27 @@ section{
     100%{top: 82px;}
 }
 
+@keyframes nav-top{
+    0%{top: 10px;}
+    100%{top: 0px;}
+}
+
+@keyframes gradient{
+    0% {color: #8a3ab9;}
+    10% {color: #e95950;}
+    20% {color: #bc2a8d;}
+    30% {color: #fccc63;}
+    40% {color: #fbad50;}
+    50% {color: #cd486b;}
+    60% {color: #4c68d7;}
+    70% {color: #cd486b;}    
+    80% {color: #fccc63;}
+    90% {color: #e95950;}
+    100% {color: #8a3ab9;}
+}
+
+@keyframes opacity{
+    0% {opacity: 1;}
+    50% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
