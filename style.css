@@ -137,12 +137,6 @@ header{
     animation: nav-top 0.8s;
 }
 
-.nav-menu__item:focus{
-    background-color: whitesmoke;
-    color: black;
-    animation: nav-top 0.8s;
-}
-
 hr{
     background-color: black;
     height: 0.2em;
@@ -203,6 +197,26 @@ section{
     height: auto;
     padding: 0.5;
     width: 70%;
+}
+
+.back-button{
+    background-color: black;
+    border: none;
+    bottom: 100px;
+    color: white;
+    font-size: 16px;
+    height: 3em;
+    left: 90%;
+    position: sticky;
+    width: 7em;
+}
+
+.back-button:hover{
+    background-color: white;
+    border: 3px solid black;
+    box-shadow: 0 0 1em black;
+    color: black;
+    cursor: pointer;
 }
 
 footer{
